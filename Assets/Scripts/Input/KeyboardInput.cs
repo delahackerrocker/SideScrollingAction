@@ -5,7 +5,7 @@ using UnityEngine;
 public class KeyboardInput : MonoBehaviour
 {
     // variable to hold Mario sprite
-    public GameObject goMario;
+    public Mario goMario;
 
     // Start is called before the first frame update
     void Start()
@@ -22,16 +22,18 @@ public class KeyboardInput : MonoBehaviour
             print("SPACE");
         }
 
-        // If the player presses KeyPad6 then move Mario right
-        if (Input.GetKeyDown(KeyCode.Keypad6))
+        // If Move Mario right
+        if ( (Input.GetKeyDown(KeyCode.Keypad6)) || (Input.GetKeyDown(KeyCode.RightArrow)) )
         {
             print("Keypad6 - Right");
+            goMario.MoveRight();
         }
 
         // If the player presses KeyPad4 then move Mario left
-        if (Input.GetKeyDown(KeyCode.Keypad4))
+        if ( (Input.GetKeyDown(KeyCode.Keypad4)) || (Input.GetKeyDown(KeyCode.LeftArrow)) )
         {
             print("Keypad4 - Left");
+            goMario.MoveLeft();
         }
 
         // If the player presses Keypad8 then move Mario Up

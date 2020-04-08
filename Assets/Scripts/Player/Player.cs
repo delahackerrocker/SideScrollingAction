@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // Link to this GameObject
+    public GameObject gameObject;
+
+    protected Vector3 moveRightAmount = new Vector3(.1f, 0, 0);
+    protected Vector3 moveLeftAmount = new Vector3(-.1f, 0, 0);
+
+    public void MoveRight()
     {
-        
+        // Check if Mario can move right
+
+        // Move Mario to the right
+        this.gameObject.transform.position += moveRightAmount;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MoveLeft()
     {
-        
+        // Check if Mario can move right
+
+        // Move Mario to the right
+        this.gameObject.transform.position += moveLeftAmount;
     }
 }
