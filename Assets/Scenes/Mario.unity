@@ -254,18 +254,34 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3529387843057611352}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &671878694 stripped
+--- !u!114 &671878694
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7544259347709708459, guid: 61a53d0c0ee101142b358e35c0bfc21c,
-    type: 3}
-  m_PrefabInstance: {fileID: 3529387843057611352}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671878693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32b67e742ee20714895867f55e47b1fb, type: 3}
+  m_Script: {fileID: 11500000, guid: e8cc2827638c76544a2273b81b6073bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marioStandsLeft: {fileID: 21300000, guid: 5ff7a4374e16d9748987a9dfe01d2837, type: 3}
+  marioStandsRight: {fileID: 21300000, guid: d7dac3729206dc24cbbfaeaf787e68e7, type: 3}
+  marioChangeDirectionLeft: {fileID: 21300000, guid: 6af203af93756b747bb799bd275ec09b,
+    type: 3}
+  marioChangeDirectionRight: {fileID: 21300000, guid: cdd1b81713b6072438e4bcf5a5860c8a,
+    type: 3}
+  marioWalkingLeft:
+  - {fileID: 21300000, guid: 5ff7a4374e16d9748987a9dfe01d2837, type: 3}
+  - {fileID: 21300000, guid: 9c2e4ac2ac19be346a4736a8060bb23f, type: 3}
+  - {fileID: 21300000, guid: 5ff7a4374e16d9748987a9dfe01d2837, type: 3}
+  - {fileID: 21300000, guid: bcb8bee51df8995439bdda99671ff1e7, type: 3}
+  marioWalkingRight:
+  - {fileID: 21300000, guid: 766dfec143626ec42843a1ecf9ce13d8, type: 3}
+  - {fileID: 21300000, guid: 79ac7d9a6bda7e44f8177fa02e400bbf, type: 3}
+  newGear: 6
+  currentGear: 6
 --- !u!1 &1321181287
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,6 +793,18 @@ PrefabInstance:
       propertyPath: moveRightAmount.x
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7544259347709708459, guid: 61a53d0c0ee101142b358e35c0bfc21c,
+        type: 3}
+      propertyPath: marioStandsLeft
+      value: 
+      objectReference: {fileID: 21300000, guid: 5ff7a4374e16d9748987a9dfe01d2837,
+        type: 3}
+    - target: {fileID: 7544259347709708459, guid: 61a53d0c0ee101142b358e35c0bfc21c,
+        type: 3}
+      propertyPath: marioStandsRight
+      value: 
+      objectReference: {fileID: 21300000, guid: d7dac3729206dc24cbbfaeaf787e68e7,
+        type: 3}
     - target: {fileID: 7562808274080119227, guid: 61a53d0c0ee101142b358e35c0bfc21c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -847,5 +875,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7544259347709708459, guid: 61a53d0c0ee101142b358e35c0bfc21c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 61a53d0c0ee101142b358e35c0bfc21c, type: 3}
