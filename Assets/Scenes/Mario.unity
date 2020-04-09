@@ -274,11 +274,21 @@ MonoBehaviour:
     type: 3}
   marioWalkingLeft:
   - {fileID: 21300000, guid: 5ff7a4374e16d9748987a9dfe01d2837, type: 3}
+  - {fileID: 21300000, guid: 5ff7a4374e16d9748987a9dfe01d2837, type: 3}
+  - {fileID: 21300000, guid: 9c2e4ac2ac19be346a4736a8060bb23f, type: 3}
   - {fileID: 21300000, guid: 9c2e4ac2ac19be346a4736a8060bb23f, type: 3}
   - {fileID: 21300000, guid: 5ff7a4374e16d9748987a9dfe01d2837, type: 3}
+  - {fileID: 21300000, guid: 5ff7a4374e16d9748987a9dfe01d2837, type: 3}
+  - {fileID: 21300000, guid: bcb8bee51df8995439bdda99671ff1e7, type: 3}
   - {fileID: 21300000, guid: bcb8bee51df8995439bdda99671ff1e7, type: 3}
   marioWalkingRight:
+  - {fileID: 21300000, guid: d7dac3729206dc24cbbfaeaf787e68e7, type: 3}
+  - {fileID: 21300000, guid: d7dac3729206dc24cbbfaeaf787e68e7, type: 3}
   - {fileID: 21300000, guid: 766dfec143626ec42843a1ecf9ce13d8, type: 3}
+  - {fileID: 21300000, guid: 766dfec143626ec42843a1ecf9ce13d8, type: 3}
+  - {fileID: 21300000, guid: d7dac3729206dc24cbbfaeaf787e68e7, type: 3}
+  - {fileID: 21300000, guid: d7dac3729206dc24cbbfaeaf787e68e7, type: 3}
+  - {fileID: 21300000, guid: 79ac7d9a6bda7e44f8177fa02e400bbf, type: 3}
   - {fileID: 21300000, guid: 79ac7d9a6bda7e44f8177fa02e400bbf, type: 3}
   newGear: 6
   currentGear: 6
