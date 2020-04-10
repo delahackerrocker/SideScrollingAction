@@ -13,6 +13,7 @@ public enum Movement
     STANDING_LEFT,
     STANDING_RIGHT,
     STANDING_CHARGE,
+    STANDING_BLAST,
     NOTHING
 }
 

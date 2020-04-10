@@ -8,65 +8,53 @@ public class BadGuyJamie : MonoBehaviour
     public Sprite[] standingLeft;
     public Sprite[] standingCharge;
     public Sprite[] standingBlast;
+    public Sprite[] chargeLeft;
+    public Sprite[] blastLeft;
+    public float fireRate = .25f;
+    public float weaponRange = 50f;
 
     [HideInInspector] public Movement currentGear = Movement.NOTHING;
 
-    protected Vector3 moveRightAmount = new Vector3(.03f, 0, 0);
-    protected Vector3 moveLeftAmount = new Vector3(-.03f, 0, 0);
-
-    protected Vector3 tooFarLeft = new Vector3(-8.04f, -3.23f, 0f);
-    protected Vector3 tooFarRight = new Vector3(8.04f, -3.23f, 0f);
-
+    protected Vector3 chargeLeftAmount = new Vector3(.03f, 0, 0);
+    protected Vector3 blastLeftAmount = new Vector3(-.03f, 0, 0);
     private void Start()
     {
         currentGear = Movement.STANDING_LEFT;
     }
-    public void MoveRight()
+    public void ChargeLeft()
     {
-        // Move Goomba to the right
-        this.gameObject.transform.position += moveRightAmount;
+        // Charge Goku to the left
+        this.gameObject.transform.position += chargeLeftAmount;
 
-        // update Goomba sprite
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = walkingRight[currentAnimationFrame];
+        // update Goku sprite
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = chargeLeft[currentAnimationFrame];
         currentAnimationFrame++;
 
-        if (currentAnimationFrame >= walkingRight.Length) currentAnimationFrame = 0;
-
-        // Check if Goomba can move right
-        if (this.transform.position.x > tooFarRight.x)
-        {
-            currentGear = Movement.WALKING_LEFT;
-        }
+        if (currentAnimationFrame >= chargeLeft.Length) currentAnimationFrame = 0;
     }
 
-    public void MoveLeft()
+    public void BlastLeft()
     {
-        // Move Goomba to the left
-        this.gameObject.transform.position += moveLeftAmount;
+        // Make Goku shoot blast
+        this.gameObject.transform.position += blastLeftAmount;
 
-        // update Goomba sprite
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = walkingLeft[currentAnimationFrame];
+        // update Goku sprite
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = blastLeft[currentAnimationFrame];
         currentAnimationFrame++;
 
-        if (currentAnimationFrame >= walkingLeft.Length) currentAnimationFrame = 0;
-
-        // Check if Goomba can move left
-        if (this.transform.position.x < tooFarLeft.x)
-        {
-            currentGear = Movement.WALKING_RIGHT;
-        }
+        if (currentAnimationFrame >= blastLeft.Length) currentAnimationFrame = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentGear == Movement.WALKING_RIGHT)
+        if (currentGear == Movement.STANDING_LEFT)
         {
-            MoveRight();
+            ChargeLeft();
         }
-        else if (currentGear == Movement.WALKING_LEFT)
+        else if (currentGear == Movement.STANDING_BLAST)
         {
-            MoveLeft();
+            BlastLeft();
         }
     }
 }
