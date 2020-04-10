@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2878946340012052315}
   - component: {fileID: 3453652182804904339}
   m_Layer: 0
-  m_Name: BadGuyTyrell
+  m_Name: BadGuyTyrell Copy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
