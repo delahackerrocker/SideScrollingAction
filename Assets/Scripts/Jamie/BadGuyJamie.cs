@@ -4,57 +4,45 @@ using UnityEngine;
 
 public class BadGuyJamie : MonoBehaviour
 {
-    protected int currentAnimationFrame = 0;
-    public Sprite[] standingLeft;
-    public Sprite[] standingCharge;
-    public Sprite[] standingBlast;
-    public Sprite[] chargeLeft;
-    public Sprite[] blastLeft;
-    public float fireRate = .25f;
-    public float weaponRange = 50f;
+   public float speed;
+   public float stoppingDistance;
+   public float retreatDistance;
+   private float timeBtwShots;
+   public float startTimeBtwShots;
+   public GameObject projectile;
+   public Transform player;
 
-    [HideInInspector] public Movement currentGear = Movement.NOTHING;
+   // Start is called before the first frame update
+   void Start()
+   {
+       player = GameObject.FindGameObjectWithTag("Player").transform;
 
-    protected Vector3 chargeLeftAmount = new Vector3(.03f, 0, 0);
-    protected Vector3 blastLeftAmount = new Vector3(-.03f, 0, 0);
-    private void Start()
-    {
-        currentGear = Movement.STANDING_LEFT;
-    }
-    public void ChargeLeft()
-    {
-        // Charge Goku to the left
-        this.gameObject.transform.position += chargeLeftAmount;
+       timeBtwShots = startTimeBtwShots;
+   }
 
-        // update Goku sprite
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = chargeLeft[currentAnimationFrame];
-        currentAnimationFrame++;
+   // Update is called once per frame
+   void Update()
+   {
+       if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
+       {
+           transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
 
-        if (currentAnimationFrame >= chargeLeft.Length) currentAnimationFrame = 0;
-    }
+       } else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
+       {
+           transform.position = this.transform.position;
 
-    public void BlastLeft()
-    {
-        // Make Goku shoot blast
-        this.gameObject.transform.position += blastLeftAmount;
+       } else if(Vector2.Distance(transform.position, player.position) < retreatDistance)
+       {
+           transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+       }
 
-        // update Goku sprite
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = blastLeft[currentAnimationFrame];
-        currentAnimationFrame++;
+       if(timeBtwShots <= 0)
+       {
+           Instantiate(projectile, transform.position, Quaternion.identity);
+           timeBtwShots = startTimeBtwShots;
 
-        if (currentAnimationFrame >= blastLeft.Length) currentAnimationFrame = 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (currentGear == Movement.STANDING_LEFT)
-        {
-            ChargeLeft();
-        }
-        else if (currentGear == Movement.STANDING_BLAST)
-        {
-            BlastLeft();
-        }
-    }
+       } else {
+           timeBtwShots -= Time.deltaTime;
+       }
+   }
 }

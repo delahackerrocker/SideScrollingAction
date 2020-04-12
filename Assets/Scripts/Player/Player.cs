@@ -12,8 +12,6 @@ public enum Movement
     JUMPING_LEFT,
     STANDING_LEFT,
     STANDING_RIGHT,
-    STANDING_CHARGE,
-    STANDING_BLAST,
     NOTHING
 }
 
