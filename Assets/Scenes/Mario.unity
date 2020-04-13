@@ -121,6 +121,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &310032951 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2826769222628681596, guid: 2a1e7ee2fe1179044ac1ad33c306f144,
+    type: 3}
+  m_PrefabInstance: {fileID: 9158420578533149883}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &310032957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310032951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SpriteLibraryAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,6 +1561,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BadGuyYusuf
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274934030845269639, guid: 2a1e7ee2fe1179044ac1ad33c306f144,
+        type: 3}
+      propertyPath: m_Mass
+      value: 4.3199997
       objectReference: {fileID: 0}
     - target: {fileID: 6652788948938798107, guid: 2a1e7ee2fe1179044ac1ad33c306f144,
         type: 3}
