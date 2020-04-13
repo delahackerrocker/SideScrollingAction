@@ -360,6 +360,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Projectile
       objectReference: {fileID: 0}
+    - target: {fileID: 6011981972631572334, guid: cc1f10e79a0bc0b47b8d7b6f9104e48a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6011981972631572336, guid: cc1f10e79a0bc0b47b8d7b6f9104e48a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -993,6 +998,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BadGuyJamie
       objectReference: {fileID: 0}
+    - target: {fileID: 4142519217162909089, guid: 53b38eb587b6924408487a27e51e69c8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4761686527943599814, guid: 53b38eb587b6924408487a27e51e69c8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1190,6 +1200,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BadGuyTyrell
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116332240835468079, guid: 223a331a7a0bdc441a4360c305c787e5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3453652182804904339, guid: 223a331a7a0bdc441a4360c305c787e5,
         type: 3}
@@ -1705,6 +1720,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 14fead983eb987f45b5ef9c4dc9bd035, type: 2}
+    - target: {fileID: 2443294880764745505, guid: 2a1e7ee2fe1179044ac1ad33c306f144,
+        type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2443294880764745505, guid: 2a1e7ee2fe1179044ac1ad33c306f144,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2826769222628681596, guid: 2a1e7ee2fe1179044ac1ad33c306f144,
         type: 3}
       propertyPath: m_Name
@@ -1770,5 +1795,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7909020160461021555, guid: 2a1e7ee2fe1179044ac1ad33c306f144,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1754842881}
+    m_RemovedComponents:
+    - {fileID: 2443294880764745505, guid: 2a1e7ee2fe1179044ac1ad33c306f144, type: 3}
+    - {fileID: 5274934030845269639, guid: 2a1e7ee2fe1179044ac1ad33c306f144, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2a1e7ee2fe1179044ac1ad33c306f144, type: 3}
