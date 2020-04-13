@@ -26,8 +26,16 @@ public class BadGuyYusuf : MonoBehaviour
             Flip();
         }
 
+
       }
     
     void Flip() {
+        if (XMoveDirection > 0) {
+
+           XMoveDirection = -1;
+        } else {
+            XMoveDirection = -1;
+        } 
+
     }
 }
