@@ -18,6 +18,8 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        target = new Vector2(player.position.x, player.position.y);
+
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
         if(transform.position.x == target.x && transform.position.y == target.y)
